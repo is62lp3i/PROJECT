@@ -58,13 +58,39 @@
                         <td><?=$data['jurusan']?></td>
                         <td><?=$data['nm_dos']?></td>
                         <td>
+                            <!-- TOMBOL DETAIL -->
+                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#detail<?=$data['id']?>">
+                            <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <!-- MODAL DETAIL-->
+                            <div class="modal fade" id="detail<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Data <?=$data['nm_mhs']?> </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Yakin data <b><?=$data['nama ']?></b> ingin dihapus?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">BTutup</button>
+                                    
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- TOMBOL EDIT -->
                             <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id']?>"><i class="fa fa-pen-to-square"></i></a>
                             
+                            <!-- TOMBOL HAPUS -->
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id']?>">
                             <i class="fa-solid fa-trash"></i>
                             </button>
 
-                            <!-- Modal -->
+                            <!-- MODAL HAPUS-->
                             <div class="modal fade" id="hapus<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
