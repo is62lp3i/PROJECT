@@ -11,7 +11,7 @@
 
 <div class="container">
     <div class="row mt-5">
-        <div class="col-6 m-auto">
+        <div class="col-8 m-auto">
             <div class="card">
             <div class="card-header text-center">
                 <h3>Sistem Informasi Mahasiswa</h3>
