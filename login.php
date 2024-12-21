@@ -1,4 +1,5 @@
 <?php
+session_start();
 $pesan = "";
 if(isset($_POST['tombol'])){
   #1. koneksi database
