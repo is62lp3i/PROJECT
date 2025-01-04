@@ -33,8 +33,13 @@ if(isset($_POST['tombol'])){
               </div>';
   }else{
     #proses ubah password
+    $sql_ubah = "UPDATE users SET password='$pass2' WHERE id='$login_id'";
+    $qry_ubah = mysqli_query($koneksi,$sql_ubah);
+
+    //header("location:logout.php");
+
     $pesan = '<div class="alert alert-success" role="alert">
-                <i class="fa-solid fa-triangle-exclamation"></i> Ubah Password!!!
+                <i class="fa-solid fa-triangle-exclamation"></i> Ubah Password Berhasil!!!
               </div>';
   }
 }
